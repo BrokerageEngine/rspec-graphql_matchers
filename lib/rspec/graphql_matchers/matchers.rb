@@ -27,7 +27,8 @@ module RSpec
     def take_an_argument(field_name)
 	    RSpec::GraphqlMatchers::HaveAField.new(field_name.to_s, :arguments)
     end
-    alias have_argument_field have_an_argument_field
+    alias take_an_argument have_argument_field
+    alias take_an_argument have_an_argument_field
     def have_a_return_field(field_name)
 	    RSpec::GraphqlMatchers::HaveAField.new(field_name.to_s, :return_fields)
     end
