@@ -60,6 +60,14 @@ module RSpec
         @expectations << [:property, expected_property_name]
         self
       end
+      def with_method_sym(expected_method_name)
+	      @expectations << [:method_sym, expected_method_name.to_sym]
+        self
+      end
+      def with_method(expected_method_name)
+	      @expectations << [:method_str, expected_method_name.to_s]
+        self
+      end
 
       def with_hash_key(expected_hash_key)
         @expectations << [:hash_key, expected_hash_key]
