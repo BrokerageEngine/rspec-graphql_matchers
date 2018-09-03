@@ -17,15 +17,15 @@ module RSpec
 
     # rubocop:disable Style/PredicateName
     def have_a_field(field_name)
-      RSpec::GraphqlMatchers::HaveAField.new(field_name)
+	    RSpec::GraphqlMatchers::HaveAField.new(field_name.to_s)
     end
     alias have_field have_a_field
     def have_an_input_field(field_name)
-      RSpec::GraphqlMatchers::HaveAField.new(field_name, :input_fields)
+	    RSpec::GraphqlMatchers::HaveAField.new(field_name.to_s, :input_fields)
     end
     alias have_input_field have_an_input_field
     def have_a_return_field(field_name)
-      RSpec::GraphqlMatchers::HaveAField.new(field_name, :return_fields)
+	    RSpec::GraphqlMatchers::HaveAField.new(field_name.to_s, :return_fields)
     end
     alias have_return_field have_a_return_field
 
